@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <!-- <body>
+        <script type="text/javascript">
+            function fn1(){
+                var regx=/^[6-9]\d{9}$/
+                if(regx.test(document.getElementById('num').value)){
+                    document.getElementById('lab1').style.visibility="visible";
+                    document.getElementById('lab1').style.color="green";
+                    return false;
+                }
+                else {
+                    document.getElementById('lab2').style.visibility="visible";
+                    document.getElementById('lab2').style.color="red";
+                    return false;
+            }
+        }
+        </script>
+        <form onsubmit="return fn1()">
+            <input type="text" placeholder="Enter mobile num" id="num">
+            <label id="lab1"style="visibility: hidden;">VALID</label><br>
+            <label id="lab2"style="visibility: hidden;">INVALID</label><br>
+            <button>Submit</button>
+        </form>
+    
+</body> -->
+<!-- ***********************email validations******************** -->
+<body>
+    <script type="text/javascript">
+        function fn2(){
+                var regx=/^([A-za-z0-9\._]+)@([a-zA-Z0-9]+).([a-z]{2,20}).[a-z]{2,20}?$/
+                // 2.8 means the dot will be any character like @#$$
+                // but if \. means it will accept its dot only
+                // if we dont know the range then we will give + which refers to 1 to infinity
+                // if we ? then that particular expression within []] is optional 
+                if(regx.test(document.getElementById('mail').value)){
+                    document.getElementById('lab1').innerHTML="VALID";
+                    document.getElementById('lab1').style.visibility="visible";
+                    document.getElementById('lab1').style.color="green";
+                    return false;
+                }
+                else {
+                    document.getElementById('lab1').innerHTML="INVALID";
+                    document.getElementById('lab1').style.visibility="visible";
+                    document.getElementById('lab1').style.color="red";
+                    return false;
+            }
+        }
+    </script>
+    <form onsubmit="return fn2()">
+        <input type="text" placeholder="Enter email" id="mail">
+        <label id="lab1"style="visibility: hidden;"></label><br>      
+        <button>Submit</button>
+</body>
+</html>

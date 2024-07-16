@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- *************onclick alert prints ****************-->
+ <body>
+    <script type="text/javascript">
+        function fn1(){
+            alert("button clicked");
+        }
+    </script>
+    <button onclick="fn1()">Click here</button> 
+<!--*************************onclick text changes******************** -->
+ <body>
+    <script type="text/javascript">
+        function fn2(){
+            document.getElementById('para').innerHTML="I am Shivani";
+            document.getElementById('para').style.color="pink";
+        }
+    </script>
+    <p id="para" style="color: red;">I am Sravanthi</p>
+    <button onclick="fn2()">Click here</button>
+</body>
+<!--****************onclick input msg in alert**********-->
+<body>
+    <script type="text/javascript">
+        function fn3(){
+            alert(document.getElementById('inp1').value);
+            alert(document.getElementById('inp2').value);
+
+        }
+    </script>
+    <input type="text" id="inp1" placeholder="Enter Username"><br>
+    <input type="password" id="inp2" placeholder="Enter password"><br>
+
+    <button onclick="fn3()">Click here</button>
+</body> -
+
+</html>

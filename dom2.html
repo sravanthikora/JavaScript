@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     ********************radio********************  
+    <script type="text/javascript">
+        function fn4(){
+            if (rd1.checked ==true)
+                alert(rd1.value);
+            else if(rd2.checked==true)
+                alert(rd2.value);
+            else if(rd3.checked==true)
+                alert(rd3.value);
+            else
+                alert("null");
+        }
+    </script>
+    <input type="radio" name="rd" id="rd1"value="Nagu">Nagu</input>
+    <input type="radio" name="rd" id="rd2"value="Shivani">Shivani</input>
+    <input type="radio" name="rd" id="rd3"value="Sarvani">Sarvani</input>
+    <button onclick="fn4()">Click here</button>
+ </body>
+<!-- *************drop down ****************** -->
+ <!-- <body>
+    <script type="text/javascript">
+       function fn5(){
+        var select=document.getElementById('opt');
+        alert(select.options[select.selectedIndex].value);
+
+       }
+    </script>
+
+    <select id="opt">
+    <option value="nagu">Nagu</option>
+    <option value="sarvani">sarvani</option>
+    <option value="Shivani">Shivani</option>
+    <option value="Sravanthi">Sravanthi</option>
+ </select>
+ <button onclick="fn5()">Click here</button>
+
+
+ </body> -->
+</html>

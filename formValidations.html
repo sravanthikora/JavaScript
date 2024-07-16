@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- <body>
+    <script type="text/javascript">
+        function validate(){
+            if(document.getElementById('name').value=="" || document.getElementById('pass').value==""){
+                alert("no blank values are allowed");     
+                return false;
+            }
+            else {
+                true;
+            }
+        }
+    </script>
+    <form onsubmit="return validate()" action="mouse.html">
+        <input type="text" placeholder="Enter Name" id="name"><br>
+        <input type="password" placeholder="Enter Password" id="pass"><br>
+        <button type="submit">Submit</button>
+    </form>
+</body> -->
+<body>
+
+    <script type="text/javascript">
+        function validate(){
+            // var regx=/E00/;
+            // var regx = /[0-9][A-Z][a-z]/;
+            //   \d:0-9
+            //   \w:a-z,A-Z,0-9 & _
+            //   \s:sapces and tabs
+            //    \t:only for tabs
+            var regx =/[^1-9][A-Z][1-9]/;  //in which the first character shouls not include 1-9
+            if(regx.test(document.getElementById('name').value)){
+                alert("valid username");
+                true;
+            }
+            else {
+                alert("invalid username");
+                document.getElementById('lab1').style.visibility="visible";
+                return false;
+            }
+            // if(document.getElementById('name').value.trim()=="" || document.getElementById('pass').value.trim()=="" ){
+            //     alert("no blank values are allowed");  
+            //     return false;
+            // }
+            // else if(document.getElementById('pass').value.trim().length<5){
+            //     document.getElementById('pass').style.border=" 3px solid red";
+            //     document.getElementById('lab').style.visibility="visible";
+            //     alert("Password lendth mut contain min 5");
+            //     return false;
+            // }
+            // else {
+            //     true;
+            // }
+        }
+    </script>
+    <form onsubmit="return validate()" action="mouse.html">
+        <input type="text" placeholder="Enter Name" id="name">
+        <label id="lab1" style="color: red; visibility:hidden;">INVALID</label><br>
+        <br>
+        <input type="password" placeholder="Enter Password" id="pass">
+        <label id="lab" style="color: red; visibility:hidden;">INVALID</label><br>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+
+
+
+</html>
